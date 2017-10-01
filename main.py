@@ -3,6 +3,8 @@ from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
 import json
 import RPi.GPIO as GPIO
 
+GPIO.setmode(GPIO.BOARD)
+
 def onInputCallback(client, userdata, message):
     print "received message "
     print client
